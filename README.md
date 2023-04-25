@@ -1,7 +1,7 @@
 # Dessert
 A Dessert App that allows users to browse a selection of desserts and view their details, including their ingredients and instructions.
 
-##Installation
+## Installation
 
 Clone the project from the GitHub repository.
 Open the project in Xcode by double-clicking the .xcodeproj file.
