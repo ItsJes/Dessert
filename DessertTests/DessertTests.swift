@@ -9,6 +9,20 @@ import XCTest
 @testable import Dessert
 
 final class DessertTests: XCTestCase {
+    
+    //Test to see if the FetchDesserts are returning a count greater than 0
+    func testFetchDesserts() async throws {
+        let desserts = try await FetchDesserts.getDesserts()
+        XCTAssertGreaterThan(desserts.count, 0)
+    }
+    
+    //Test to see if the dessertDetails is returning a count greater than 0
+    func testFetchDessertDetails() async throws {
+        let desserts = try await FetchDesserts.getDesserts()
+        let details = try await FetchDesserts.getDessertDetails(id: desserts[0].idMeal)
+        XCTAssertGreaterThan(details.count, 0)
+    }
+    
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
